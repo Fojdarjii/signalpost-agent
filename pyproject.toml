@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signalpost"
+version = "0.1.0"
+description = "Evidence-first Norwegian company profile collector"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3", "httpx>=0.27,<1"]
+
+[project.scripts]
+signalpost = "signalpost.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["signalpost*"]
